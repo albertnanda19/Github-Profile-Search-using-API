@@ -103,23 +103,23 @@ class Profile extends React.Component{
                         </h2>
                         <h3>{data.location || 'I live in my mind'}</h3>
                     </div>
-                    <div className="flex justify-center items-center pb-8 gap-4 border-t border-black">
+                    <div className="flex justify-center items-center pb-8 gap-4 rounded-bl-xl rounded-br-xl bg-black">
                         <div className="pt-6">
                             <a href={followers} target="_blank" title="Jumlah Followers" rel="noreferrer noopener" className="flex flex-col justify-center items-center">
                                 <i className="text-secondary font-bold">{data.followers}</i>
-                                <span className="font-bold">Followers</span>
+                                <span className="font-bold text-white">Followers</span>
                             </a>
                         </div>
                         <div className="pt-6">
                             <a href={repositories} target="_blank" title="Jumlah Followers" rel="noreferrer noopener" className="flex flex-col justify-center items-center">
                                 <i className="text-secondary font-bold">{data.repos}</i>
-                                <span className="font-bold">Repository</span>
+                                <span className="font-bold text-white">Repository</span>
                             </a>            
                         </div>
                         <div className="pt-6">
                             <a href={following} target="_blank" title="Jumlah Followers" rel="noreferrer noopener" className="flex flex-col justify-center items-center">
                                 <i className="text-secondary font-bold">{data.following}</i>
-                                <span className="font-bold">Following</span>
+                                <span className="font-bold text-white">Following</span>
                             </a>            
                         </div>
                     </div>
