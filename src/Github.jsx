@@ -1,4 +1,5 @@
 import React from "react";
+import GifImage from './gif.gif'
 
 const API = 'https://api.github.com/users';
 
@@ -83,10 +84,13 @@ class Profile extends React.Component{
 
         if(data.notFound === 'Not Found'){
             return(
-                <div>
-                    <h2>Oops !!!</h2>
-                    <p>Could't Find Your Username. Try Again</p>
-                </div>
+                <section className="bg-white w-[20rem] rounded-bl-xl h-auto rounded-br-xl mb-12 mx-4">
+                    <div className="flex flex-col justify-center gap-4 items-center py-8 px-4 text-center">
+                        <img src={GifImage} alt="Gif" />
+                        <h3>Tidak dapat menemukan user yang anda cari !</h3>
+                        <h4>Silahkan coba masukkan username yang tepat.</h4>
+                    </div>
+                </section>
             );
         }else{
             return(
@@ -101,7 +105,7 @@ class Profile extends React.Component{
                                 {data.name || data.username}
                             </a>
                         </h2>
-                        <h3>{data.location || 'I live in my mind'}</h3>
+                        <h3>{data.location || 'Saya tinggal di mana saja'}</h3>
                     </div>
                     <div className="flex justify-center items-center pb-8 gap-4 rounded-bl-xl rounded-br-xl bg-black">
                         <div className="pt-6">
